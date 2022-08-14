@@ -1,0 +1,180 @@
+<html>
+
+<head>
+    <title>Creating Blog Page</title>
+    <link rel="stylesheet" href="blog.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <nav>
+        <div class="left-side">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="logo" />
+            </a>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="blog.html" class="list-active">My Project</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right-side">
+            <a href="contact.html"> Contact Me </a>
+        </div>
+    </nav>
+
+    <!-- Blog -->
+    <!-- Form -->
+    <div class="blog">
+        <div class="blog-form">
+            <div class="form-container">
+                <form onsubmit="addBlog(event)">
+                    <h1>ADD MY PROJECT</h1>
+                    <div>
+                        <label style="font-weight: bold;" for="input-blog-title">Project Name</label>
+                        <input class="nama" id="input-blog-title" type="input-blog-title" />
+                    </div>
+
+                    <div>
+                        <div class="Date">
+                            <div class="start">
+                                <label style="font-weight: bold;" for="startDate"> Start Date</label>
+                                <input class="tanggal" id="startDate" type="date" />
+                            </div>
+                            <div class="end-date" style="width: 250px;">
+                                <label style="font-weight: bold;" for="endDate">End Date</label>
+                                <input class="tanggal" id="endDate" type="date" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label style="font-weight: bold;" for="input-blog-content">Description</label>
+                        <textarea class="deskripsi" id="input-blog-content"></textarea>
+
+                    </div>
+
+                    <div>
+                        <label style="font-weight: bold;" for="checkBox">Technologies</label>
+                        <div class="chk">
+                            <div class="chkLeft">
+                                <div style="padding-top: 10px;
+                                            padding-bottom: 10px;">
+                                    <input class="input" type="checkbox" value="node-js" id="inputNode">
+                                    <label class="fontTech" for="inputReact">Node Js</label>
+                                </div>
+                                <div style="padding-top: 10px;
+                                            padding-bottom: 10px;">
+                                    <input class="input" type="checkbox" value="react" id="inputReact">
+                                    <label class="fontTech" for="inputReact">React Js</label>
+                                </div>
+                            </div>
+
+                            <div class="chkRight">
+                                <div style="padding-top: 10px;
+                                            padding-bottom: 10px;">
+                                    <input class="input" type="checkbox" value="java" id="inputNext">
+                                    <label class="fontTech" for="inputNext">Next Js</label>
+                                </div>
+
+                                <div style="padding-top: 10px;
+                                            padding-bottom: 10px;">
+                                    <input class="input" type="checkbox" value="python" id="inputTs">
+                                    <label class="fontTech" for="inputTs">TypeScript</label>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div>
+                        <label>Upload Image</label>
+                        <div class="input-blog-image-group">
+                            <label for="input-blog-image">
+                                <p>Attach File</p>
+                                <img src="assets/file.png" alt="file" />
+                            </label>
+                            <input type="file" id="input-blog-image" hidden />
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button>Submit</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+        <hr class="line" />
+        <div class="">
+            <h1 class="judul-project">MY PROJECT</h1>
+        </div>
+
+
+        <div id="contents" class="blog-list">
+            <!-- dynamic content would be here -->
+            <div class="blog-list-item">
+                <div class="blog-image">
+                    <img src="assets/download.jfif" alt="" />
+                </div>
+                <div class="blog-content">
+
+                    <h1>
+                        <a class="judul-content" href="blog-detail.html" target="_blank">Pasar Coding di Indonesia</a>
+                    </h1>
+                    <div class="detail-blog-content">
+                        Durasi: 3 bulan
+                    </div>
+                    <div class="kalimat">
+                        <p>
+                            Ketimpangan sumber daya manusia (SDM) di sektor digital masih
+                            menjadi isu yang belum terpecahkan. Berdasarkan penelitian
+                            ManpowerGroup, ketimpangan SDM global, termasuk Indonesia,
+                            meningkat dua kali lipat dalam satu dekade terakhir. Lorem ipsum,
+                            dolor sit amet consectetur adipisicing elit. Quam, molestiae
+                            numquam! Deleniti maiores expedita eaque deserunt quaerat! Dicta,
+                            eligendi debitis?
+                        </p>
+                    </div>
+
+                    <!-- <i class="fa-brands fa-twitter"></i> -->
+                    <div class="logo-icon">
+                        <i class="fa-brands fa-react"></i>
+                        <i class="fa-brands fa-node-js"></i>
+                        <i class="fa-brands fa-java"></i>
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                    
+
+                    <!-- <div style="text-align: right; margin-top: 15px">
+                        <span style="font-size: 12px; color:grey">1 minutes ago</span>
+                    </div> -->
+
+                    <div class="btn-group">
+                        <div class="btn-edit">
+                            <button>Edit</button>
+                        </div>
+
+                        <div class="btn-delete">
+                            <button>Delete</button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="blog.js"></script>
+</body>
+
+</html>
